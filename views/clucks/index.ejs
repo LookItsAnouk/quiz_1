@@ -1,0 +1,19 @@
+<!-- views/notes/index.ejs -->
+<%- include("../partials/header") %>
+<div>
+  <% for (let cluck of clucks) { %>
+  <div class="card mb-4">
+  
+    <div class="card-body">
+      <img src="../images/chicken_icon.png" width="50" height="50" alt="chicken user" style="position: relative;">  
+        <h5 ><%= cluck.username %></h5>
+        <p><%= cluck.content %></p>
+        <% if (cluck.imgurl) { %>
+          <img class="card-img-bottom" style="width: 25vw;" src="<%= cluck.imgurl %>" alt="Cluck img" />
+          <% } %>
+    </div>
+  </div>
+  <% } %>
+</div>
+
+<%- include("../partials/footer") %>

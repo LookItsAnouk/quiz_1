@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+<form method="POST" action="/sign">
+      <div class="form-group">
+        <label for="username" style="margin: 10px">Username:</label> <br>
+        <input
+          type="text"
+          name="username"
+          class="form-control"
+          placeholder="e.g. Madam Welminster"
+        />
+      </div>
+      <br>
+  <input type="submit" class="btn btn-outline-success" value="Sign In" />
+</form>
+<%- include('../partials/footer') %>
