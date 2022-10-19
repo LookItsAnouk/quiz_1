@@ -15,7 +15,7 @@
          return {
            imgurl: faker.image.imageUrl(),
            username: faker.name.firstName(),
-           content: faker.lorem.paragraph(),
+           content: faker.lorem.lines(1),
            created_at: faker.date.past(),
            updated_at: faker.date.past()
          };

@@ -1,18 +1,22 @@
 <!-- views/notes/index.ejs -->
 <%- include("../partials/header") %>
-<div>
+<div style="padding-left: 10px; padding-right: 10px;">
+  <br>
   <% for (let cluck of clucks) { %>
-  <div class="card mb-4">
-  
-    <div class="card-body">
-      <img src="../images/chicken_icon.png" width="50" height="50" alt="chicken user" style="position: relative;">  
-        <h5 ><%= cluck.username %></h5>
-        <p><%= cluck.content %></p>
-        <% if (cluck.imgurl) { %>
-          <img class="card-img-bottom" style="width: 25vw;" src="<%= cluck.imgurl %>" alt="Cluck img" />
+    <div class="card flex-row flex-wrap" >
+      <div class="card-header border-0">
+        <img src="../images/chicken_icon.png" class="img-fluid" width="50" height="50" style="margin:10px 0px 10px 5px ;" alt="chicken user icon">  
+      </div> 
+      <div class="card-block px-2">
+          <h6 class="card-title" style="margin-top: 5px; ;"><%= cluck.username %></h6> 
+          <p class="card-text"><%= cluck.content %></p>
+          <% if (cluck.imgurl) { %>
+          <img class="card-img-bottom" style="width: 25vw; padding-bottom: 5px;" src="<%= cluck.imgurl %>" alt="Cluck img" />
           <% } %>
+          
+      </div>
     </div>
-  </div>
+    <br>
   <% } %>
 </div>
 
