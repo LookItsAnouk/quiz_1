@@ -1,0 +1,33 @@
+
+
+  <nav class="navbar navbar-expand-med navbar-custom ">
+    <a class="navbar-brand" href="./">
+        <img src="../images/cluck_icon.jpg" width="75" height="65" style="padding-left: 10px;" alt="chicken sitting on egg">  
+    </a>
+  
+    <div class=" navbar navbar-expand " id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+        <li class="nav-item active">
+          <a class="nav-link" href="/clucks/new" style="color: black ;">Cluck</a>
+        </li>
+
+        <% if (username) { %>
+            <li class="nav-item">
+                <a class="nav-link" ><%- username %></a>
+                <li class="nav-item">
+                <form action="/sign_out" method="POST">
+                    <button type="submit" class='btn btn-warning'>Sign Out</button>
+                </form>
+            </li>
+            </li>    
+        <% } else { %>
+            <li class="nav-item">
+                <form action="/clucks/sign_in" >
+                    <button type="submit" class='btn btn-warning'>Sign In</button>
+                </form>
+            </li>    
+        <% } %>
+      </ul>
+    
+    </div>
+  </nav>

@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+<form method="POST" action="/clucks">
+      <div class="form-group">
+        <label for="content" style="margin: 5px">Content:</label> <br>
+        <input
+          type="text"
+          name="content"
+          class="form-control"
+          placeholder="Start the Cluck!"
+        />
+      </div>
+      <label for="imgurl" style="margin: 5px">Image URL:</label> <br>
+      <input
+        type="text"
+        name="imgurl"
+        class="form-control"
+        placeholder="https://i.imgur.com/qM6KaEy.gif"
+      />
+    </div>
+  <input type="submit" class="btn btn-outline-success" value="Cluck!" style="margin-top: 10px;"/>
+</form>
+<%- include('../partials/footer') %>
